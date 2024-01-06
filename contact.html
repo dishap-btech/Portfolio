@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="style.css">
+        <title>Contact page</title>
+    </head>
+    <body style="background-color: rgb(164, 214, 198);">
+        <section id="contact" class="container align-justify">
+            <h2>Contact me!</h2>
+            <h3>Your feedback or doubts is extremely valuable.</h3>
+                <p>If you want to ask something or a give a feedback, fill in your information in the below form to get a call/text or you can also</p>
+                <a href="mailto:dishap.btech23@rvu.edu.in">click to email me at dishap.btech23@rvu.edu.in</a>
+            
+            <form onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <br>
+                <label for="email">Email id:</label>
+                <input type="email" id="email" name="email">
+                <br>
+                <label for="telephone">Phone Number:</label>
+                <input type="tel" id="telephone" name="telephone">
+                <br>
+                <label for="message">Enter feedback or queries-:</label>
+                <textarea id="message" name="message"></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            <script>
+                function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var telephone = document.getElementById('telephone').value;
+            var message = document.getElementById('message').value;
+        
+            if (name == "" || email == "" || telephone == "" || message == "") {
+                alert("All fields are not entered. Please recheck.");
+                return false;
+            } 
+            else {
+                alert("Your details have been submitted. Thank you for your feedback!");
+                
+                return false; 
+            }
+        }
+            </script>
+        </section>
+    </body>
+</html>
